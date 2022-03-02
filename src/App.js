@@ -5,8 +5,6 @@ import { showcaseData } from "./data/showcase.js";
 import StatsProfile from "./components/StatsProfile.js";
 import { makeProfiles } from "./components/makeProfiles.js";
 
-console.log(makeProfiles(["Almorah","Akira","Leeania","Sevante","Sir Studly"],showcaseData));
-
 var trace1 = {
   x: [
     "1",
@@ -152,8 +150,24 @@ class App extends Component {
     currentData: showcaseData,
     pcNames: ["Almorah","Akira","Leeania","Sevante","Sir Studly"],
     pcStats: [ ],
-    dmStats: {}
+    dmStats: {},
+    pcInput: ["Almorah","Akira","Leeania","Sevante","Sir Studly","","",""]
   };
+
+  handleSubmitNames = () => {
+    //const newNames = [];
+    //8 is the temporary max
+    // for (let i = 0; i < 8; i++) {
+    //   if ()
+    // }
+    console.log(this.state.pcInput);
+  }
+
+  handleNameChange = (index,value) => {
+    let newNames = [...this.state.pcInput];
+    newNames[index] = value;
+    this.setState({pcInput: newNames})
+  }
 
   render() {
     return (
@@ -173,37 +187,85 @@ class App extends Component {
         <div className="d-flex justify-content-center">
           <form className="row g-3 mb-2">
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc1" placeholder="Character Name" defaultValue="Almorah" />
+              <input
+                type="text"
+                className="form-control"
+                id="pc0"
+                placeholder="Character Name"
+                value={this.state.pcInput[0]}
+                onChange={(e) => this.handleNameChange(0,e.target.value)} />
             </div>
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc2" placeholder="Character Name" defaultValue="Akira"/>
+              <input
+                type="text"
+                className="form-control"
+                id="pc1"
+                placeholder="Character Name"
+                value={this.state.pcInput[1]}
+                onChange={(e) => this.handleNameChange(1,e.target.value)} />
             </div>
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc3" placeholder="Character Name" defaultValue="Leeania"/>
+              <input
+                type="text"
+                className="form-control"
+                id="pc2"
+                placeholder="Character Name"
+                value={this.state.pcInput[2]}
+                onChange={(e) => this.handleNameChange(2,e.target.value)} />
             </div>
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc4" placeholder="Character Name" defaultValue="Sevante"/>
+              <input
+                type="text"
+                className="form-control"
+                id="pc3"
+                placeholder="Character Name"
+                value={this.state.pcInput[3]}
+                onChange={(e) => this.handleNameChange(3,e.target.value)} />
             </div>
           </form>
         </div>
         <div className="d-flex justify-content-center">
           <form className="row g-3">
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc5" placeholder="Character Name" defaultValue="Sir Studly"/>
+              <input
+                type="text"
+                className="form-control"
+                id="pc4"
+                placeholder="Character Name"
+                value={this.state.pcInput[4]}
+                onChange={(e) => this.handleNameChange(4,e.target.value)} />
             </div>
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc6" placeholder="Character Name" />
+              <input
+                type="text"
+                className="form-control"
+                id="pc5"
+                placeholder="Character Name"
+                value={this.state.pcInput[5]}
+                onChange={(e) => this.handleNameChange(5,e.target.value)} />
             </div>
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc7" placeholder="Character Name" />
+              <input
+                type="text"
+                className="form-control"
+                id="pc6"
+                placeholder="Character Name"
+                value={this.state.pcInput[6]}
+                onChange={(e) => this.handleNameChange(6,e.target.value)} />
             </div>
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc8" placeholder="Character Name" />
+              <input
+                type="text"
+                className="form-control"
+                id="pc7"
+                placeholder="Character Name"
+                value={this.state.pcInput[7]}
+                onChange={(e) => this.handleNameChange(7,e.target.value)} />
             </div>
           </form>
         </div>
         <div className="col-lg-6 mx-auto text-center mt-2">
-          <button type="submit" className="btn btn-primary mb-3">Submit</button>
+          <button type="submit" className="btn btn-primary mb-3" onClick={() => this.handleSubmitNames()}>Submit</button>
         </div>
         <hr />
         <div className="col-lg-6 mx-auto text-center">
