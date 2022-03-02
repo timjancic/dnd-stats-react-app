@@ -3,8 +3,9 @@ import "./App.css";
 import Plot from "react-plotly.js";
 import { showcaseData } from "./data/showcase.js";
 import StatsProfile from "./components/StatsProfile.js";
+import { makeProfiles } from "./components/makeProfiles.js";
 
-console.log(showcaseData);
+console.log(makeProfiles(["Almorah","Akira","Leeania","Sevante","Sir Studly"],showcaseData));
 
 var trace1 = {
   x: [
@@ -148,8 +149,9 @@ var trace5 = {
 
 class App extends Component {
   state = {
-    pcNames: ["Almorah","Akira","Leeania","Sevante","Sir Studly","","",""],
-    pcStats: [{},{},{},{},{},{},{},{}],
+    currentData: showcaseData,
+    pcNames: ["Almorah","Akira","Leeania","Sevante","Sir Studly"],
+    pcStats: [ ],
     dmStats: {}
   };
 
@@ -171,23 +173,23 @@ class App extends Component {
         <div className="d-flex justify-content-center">
           <form className="row g-3 mb-2">
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc1" placeholder="Character Name" value="Almorah" />
+              <input type="text" className="form-control" id="pc1" placeholder="Character Name" defaultValue="Almorah" />
             </div>
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc2" placeholder="Character Name" value="Akira"/>
+              <input type="text" className="form-control" id="pc2" placeholder="Character Name" defaultValue="Akira"/>
             </div>
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc3" placeholder="Character Name" value="Leeania"/>
+              <input type="text" className="form-control" id="pc3" placeholder="Character Name" defaultValue="Leeania"/>
             </div>
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc4" placeholder="Character Name" value="Sevante"/>
+              <input type="text" className="form-control" id="pc4" placeholder="Character Name" defaultValue="Sevante"/>
             </div>
           </form>
         </div>
         <div className="d-flex justify-content-center">
           <form className="row g-3">
             <div className="col-auto">
-              <input type="text" className="form-control" id="pc5" placeholder="Character Name" value="Sir Studly"/>
+              <input type="text" className="form-control" id="pc5" placeholder="Character Name" defaultValue="Sir Studly"/>
             </div>
             <div className="col-auto">
               <input type="text" className="form-control" id="pc6" placeholder="Character Name" />
