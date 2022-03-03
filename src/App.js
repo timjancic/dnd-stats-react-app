@@ -8,6 +8,7 @@ import D20RollsPlot from "./components/d20RollsPlot.jsx";
 import AdvantagePlot from "./components/advantagePlot.jsx";
 import DamageDeltPlot from './components/damageDeltPlot.jsx';
 import DamageMaxPlot from './components/damageMaxPlot.jsx';
+import SkillsUsedPlot from './components/skillsUsedPlot.jsx';
 
 let showcaseStats = makeProfiles(["Almorah","Akira","Leeania","Sevante","Sir Studly"],showcaseData);
 
@@ -169,6 +170,20 @@ class App extends Component {
         <div className="row">
           <div className="col">
             <DamageDeltPlot
+              pcNames={this.state.pcNames}
+              pcStats={this.state.pcStats}
+            />
+          </div>
+          <div className="col">
+            <DamageMaxPlot
+              pcNames={this.state.pcNames}
+              pcStats={this.state.pcStats}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <SkillsUsedPlot
               pcNames={this.state.pcNames}
               pcStats={this.state.pcStats}
             />
