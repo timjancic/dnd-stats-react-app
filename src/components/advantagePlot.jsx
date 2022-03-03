@@ -13,10 +13,13 @@ class AdvantagePlot extends Component {
             height: 400,
             title: "How often there was dis/advantage",
             barmode: "stack",
+            paper_bgcolor: "rgba(248, 249, 250, 1)",
+            plot_bgcolor: "rgba(248, 249, 250, 1)",
             yaxis: {
               title: {
                 text: "How many times"
-              }
+              },
+              gridcolor: "black",
             },
           }}
         />

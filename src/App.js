@@ -6,6 +6,7 @@ import StatsProfile from "./components/StatsProfile.js";
 import { makeProfiles } from "./components/makeProfiles.js";
 import D20RollsPlot from "./components/d20RollsPlot.jsx";
 import AdvantagePlot from "./components/advantagePlot.jsx";
+import DamageDeltPlot from './components/damageDeltPlot.jsx';
 
 let showcaseStats = makeProfiles(["Almorah","Akira","Leeania","Sevante","Sir Studly"],showcaseData);
 
@@ -148,18 +149,30 @@ class App extends Component {
           <button type="submit" className="btn btn-primary mb-3" onClick={() => this.handleSubmitNames()}>Submit</button>
         </div>
         <hr />
-        <div className="row">
-          <div className="col">
+        <div className="row align-items-md-stretch">
+          <div className="col-md-6">
             <D20RollsPlot
               pcNames={this.state.pcNames}
               pcStats={this.state.pcStats}
             />
           </div>
+          <div className="col-md-6">
+            <div className="h-100 p-5 bg-light border rounded-3">
+              <AdvantagePlot
+                pcNames={this.state.pcNames}
+                pcStats={this.state.pcStats}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="row">
           <div className="col">
-            <AdvantagePlot
+            <DamageDeltPlot
               pcNames={this.state.pcNames}
               pcStats={this.state.pcStats}
             />
+          </div>
+          <div className="col">
           </div>
         </div>
 
