@@ -83,8 +83,8 @@ export function makeProfiles(pcArrayInput,dataTable) {
     pcStats[i].analyzeData();
   }
 
-  let pcStats2 = JSON.parse(JSON.stringify(pcStats));
-  let dmStats2 = JSON.parse(JSON.stringify(dmStats));
+  //let pcStats2 = JSON.parse(JSON.stringify(pcStats));
+  //let dmStats2 = JSON.parse(JSON.stringify(dmStats));
 
-  return [pcStats2,dmStats2];
+  return [pcStats,dmStats];
 }

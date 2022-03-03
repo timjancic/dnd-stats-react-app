@@ -46,6 +46,7 @@ class StatsProfile {
       damageArray: [], //list of each weapon and how much total damage was done with each in format [[sum, times used, name]...]
       damageMax: [0,""], //max damage dealt in one roll, format [Max damage, name of attack used]
       nAdv: 0, //number of times with advantage
+      nNorm: 0, //number of times with no advantage or disadvantage
       nDis: 0 //number of times with disadvantage
     }
   }
@@ -64,6 +65,8 @@ class StatsProfile {
         this.meta.nAdv++;
       } else if (this.d20Data.advantage[i] == -1) {
         this.meta.nDis++;
+      } else {
+        this.meta.nNorm++;
       }
 
       for (let j = 0; j < this.d20Data.results[i].length; j++) {

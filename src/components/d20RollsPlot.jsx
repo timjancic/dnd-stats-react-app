@@ -37,7 +37,7 @@ class D20RollsPlot extends Component {
       data.push({
         x: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"],
         y: this.props.pcStats[i].meta.nd20Array,
-        name: this.props.pcNames[i],
+        name: this.props.pcNames[i] + " (" + this.props.pcStats[i].meta.avgd20.toFixed(2) + ")",
         type: "bar"
       });
     }
