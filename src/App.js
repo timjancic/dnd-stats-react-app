@@ -9,6 +9,7 @@ import AdvantagePlot from "./components/advantagePlot.jsx";
 import DamageDeltPlot from './components/damageDeltPlot.jsx';
 import DamageMaxPlot from './components/damageMaxPlot.jsx';
 import SkillsUsedPlot from './components/skillsUsedPlot.jsx';
+import AbilitiesUsedPlot from './components/abilitiesUsedPlot.jsx';
 
 let showcaseStats = makeProfiles(["Almorah","Akira","Leeania","Sevante","Sir Studly"],showcaseData);
 
@@ -189,7 +190,7 @@ class App extends Component {
             />
           </div>
           <div className="col">
-            <DamageMaxPlot
+            <AbilitiesUsedPlot
               pcNames={this.state.pcNames}
               pcStats={this.state.pcStats}
             />
