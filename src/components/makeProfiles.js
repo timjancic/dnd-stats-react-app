@@ -1,40 +1,17 @@
 import StatsProfile from "./StatsProfile.js"
 
-export function makeProfiles(pcArray,dataTable) {
+export function makeProfiles(pcArrayInput,dataTable) {
   /*
-  Given an array of pc names (pcArray) and a table of data, this function makes profiles for each pc and the dm where the dm is the rest of the aliases.
+  Given an array of pc names (pcArrayInput) and a table of data, this function makes profiles for each pc and the dm where the dm is the rest of the aliases.
   Returns an array of profiles.
   */
+  let pcArray = pcArrayInput.filter(n => n != ""); //create new array that filters out the indexes with empty strings
 
   let pcData = new Array(pcArray.length);
   let dmData = [[]];
   let pcStats = new Array(pcArray.length);
   let dmStats = new StatsProfile();
   for (let i = 0; i < pcData.length; i++) {pcData[i] = []; pcStats[i] = new StatsProfile();} //fill array with empty arrays
-
-  let assignment = new Promise((resolve,reject) => {
-    if (assignData()) {
-      resolve();
-      console.log("assignment finished");
-    } else {
-      reject();
-      console.log("There was an error in assigning the data");
-    }
-  });
-
-  assignment.then(() => {
-    for (let i = 0; i < pcData.length; i++) {
-      makeProfile(pcData[i],pcStats[i]);
-    }
-    makeProfile(dmData[0],dmStats);
-    console.log("profiles finished");
-  })
-  .then(() => {
-    for (let i = 0; i < pcData.length; i++) {
-      pcStats[i].analyzeData();
-    }
-    console.log("profile data analyzed");
-  });
 
   function assignData() {
     /*
@@ -97,5 +74,17 @@ export function makeProfiles(pcArray,dataTable) {
     }
   }
 
-  return [pcStats,dmStats]
+  assignData();
+  for (let i = 0; i < pcData.length; i++) {
+    makeProfile(pcData[i],pcStats[i]);
+  }
+  makeProfile(dmData[0],dmStats);
+  for (let i = 0; i < pcData.length; i++) {
+    pcStats[i].analyzeData();
+  }
+
+  let pcStats2 = JSON.parse(JSON.stringify(pcStats));
+  let dmStats2 = JSON.parse(JSON.stringify(dmStats));
+
+  return [pcStats2,dmStats2];
 }

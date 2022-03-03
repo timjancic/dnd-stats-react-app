@@ -4,169 +4,48 @@ import Plot from "react-plotly.js";
 import { showcaseData } from "./data/showcase.js";
 import StatsProfile from "./components/StatsProfile.js";
 import { makeProfiles } from "./components/makeProfiles.js";
+import D20RollsPlot from "./components/d20RollsPlot.jsx";
 
-var trace1 = {
-  x: [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "18",
-    "19",
-    "20"
-  ],
-  y: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0],
-  name: "Akira",
-  type: "bar"
-};
-
-var trace2 = {
-  x: [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "18",
-    "19",
-    "20"
-  ],
-  y: [1, 1, 1, 1, 0, 2, 0, 0, 2, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
-  name: "Almorah",
-  type: "bar"
-};
-
-var trace3 = {
-  x: [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "18",
-    "19",
-    "20"
-  ],
-  y: [1, 2, 0, 1, 0, 0, 3, 0, 2, 1, 1, 0, 0, 0, 0, 3, 1, 0, 0, 0],
-  name: "Leeania",
-  type: "bar"
-};
-
-var trace4 = {
-  x: [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "18",
-    "19",
-    "20"
-  ],
-  y: [1, 0, 0, 0, 1, 0, 0, 1, 1, 2, 1, 0, 1, 1, 1, 1, 1, 1, 2, 0],
-  name: "Sevante",
-  type: "bar"
-};
-
-var trace5 = {
-  x: [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "18",
-    "19",
-    "20"
-  ],
-  y: [0, 0, 2, 0, 0, 1, 2, 0, 0, 1, 2, 1, 0, 0, 0, 0, 0, 1, 1, 0],
-  name: "Sir Studly",
-  type: "bar"
-};
+let showcaseStats = makeProfiles(["Almorah","Akira","Leeania","Sevante","Sir Studly"],showcaseData);
 
 class App extends Component {
+
   state = {
     currentData: showcaseData,
+    pcInput: ["Almorah","Akira","Leeania","Sevante","Sir Studly","","",""],
     pcNames: ["Almorah","Akira","Leeania","Sevante","Sir Studly"],
-    pcStats: [ ],
-    dmStats: {},
-    pcInput: ["Almorah","Akira","Leeania","Sevante","Sir Studly","","",""]
+    pcStats: showcaseStats[0],
+    dmStats: showcaseStats[1]
   };
 
   handleSubmitNames = () => {
-    //const newNames = [];
-    //8 is the temporary max
-    // for (let i = 0; i < 8; i++) {
-    //   if ()
-    // }
-    console.log(this.state.pcInput);
+    console.log("submit buttons was pressed");
+
+    let temp;
+    let newNamesShort;
+
+    let p = new Promise((resolve,reject) => {
+      temp = makeProfiles(this.state.pcInput,this.state.currentData);
+      newNamesShort = this.state.pcInput.filter(n => n != "");
+      if (temp) {resolve()} else {reject()}
+    });
+
+    p.then(() => {
+      this.setState({
+        pcNames: newNamesShort,
+        pcStats: temp[0],
+        dmStats: temp[1]
+      });
+    })
+
   }
 
   handleNameChange = (index,value) => {
     let newNames = [...this.state.pcInput];
     newNames[index] = value;
-    this.setState({pcInput: newNames})
+    this.setState({
+      pcInput: newNames,
+    });
   }
 
   render() {
@@ -269,46 +148,9 @@ class App extends Component {
         </div>
         <hr />
         <div className="col-lg-6 mx-auto text-center">
-          <Plot
-            data={[trace1, trace2, trace3, trace4, trace5]}
-            layout={{
-              width: 800,
-              height: 400,
-              title: "All PC d20 rolls",
-              barmode: "stack",
-              yaxis: {
-                title: {
-                  text: "sum of times value was rolled"
-                }
-              },
-              xaxis: {
-                title: {
-                  text: "value of roll"
-                },
-                tickvals: [
-                  1,
-                  2,
-                  3,
-                  4,
-                  5,
-                  6,
-                  7,
-                  8,
-                  9,
-                  10,
-                  11,
-                  12,
-                  13,
-                  14,
-                  15,
-                  16,
-                  17,
-                  18,
-                  19,
-                  20
-                ]
-              }
-            }}
+          <D20RollsPlot
+            pcNames={this.state.pcNames}
+            pcStats={this.state.pcStats}
           />
         </div>
         <div className="row align-items-md-stretch">
