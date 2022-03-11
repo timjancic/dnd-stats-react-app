@@ -4,6 +4,16 @@ import Plot from "react-plotly.js";
 const abilities = ["Strength","Dexterity","Constitution","Intelligence","Wisdom","Charisma","Str-Save","Dex-Save","Con-Save","Int-Save","Wis-Save","Cha-Save"];
 
 class AbilitiesUsedPlot extends Component {
+  shouldComponentUpdate(nextProps) {
+     // Rendering the component only if
+     // passed props value is changed
+     if (nextProps.pcNames !== this.props.pcNames) {
+       console.log("AbilitiesUsedPlot Rendered");
+       return true;
+     } else {
+       return false;
+     }
+  }
 
   render() {
     return (

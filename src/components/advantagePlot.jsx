@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import Plot from "react-plotly.js";
 
 class AdvantagePlot extends Component {
+  shouldComponentUpdate(nextProps) {
+     // Rendering the component only if
+     // passed props value is changed
+     if (nextProps.pcNames !== this.props.pcNames) {
+       console.log("AdvantagePlot Rendered");
+       return true;
+     } else {
+       return false;
+     }
+  }
 
   render() {
     return (

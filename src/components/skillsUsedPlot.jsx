@@ -4,6 +4,16 @@ import Plot from "react-plotly.js";
 const skills = ["Acrobatics","Animal Handling","Arcana","Athletics","Deception","History","Insight","Intimidation","Investigation","Medicine","Nature","Perception","Performance","Persuasion","Religion","Sleight of Hand","Stealth","Survival"];
 
 class SkillsUsedPlot extends Component {
+  shouldComponentUpdate(nextProps) {
+     // Rendering the component only if
+     // passed props value is changed
+     if (nextProps.pcNames !== this.props.pcNames) {
+       console.log("SkillsUsedPlot Rendered");
+       return true;
+     } else {
+       return false;
+     }
+  }
 
   render() {
     return (
