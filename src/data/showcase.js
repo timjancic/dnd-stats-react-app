@@ -1,143 +1,256 @@
-export const showcaseData = [
-  ["Griffon","Wisdom Saving Throw: Griffon",0,1,20,15,[14]],
-  ["Leeania","Animal Handling Skill Check: Leeania (Advantage)",1,2,20,13,[4,9]],
-  ["Akira","Perception Skill Check: Akira",0,1,20,8,[5]],
-  ["Sevante","Perception Skill Check: Sevante",0,1,20,17,[11]],
-  ["Remorhaz","Remorhaz rolls for Initiative!",0,1,20,5,[4]],
-  ["Harshnag","Harshnag rolls for Initiative!",0,1,20,3,[4]],
-  ["Akira","Akira rolls for Initiative!",0,1,20,14,[13]],
-  ["Sir Studly","Sir Studly rolls for Initiative!",0,1,20,12,[12]],
-  ["Almorah","Almorah rolls for Initiative!",0,1,20,13,[10]],
-  ["Leeania","Leeania rolls for Initiative!",0,1,20,10,[7]],
-  ["Sevante","Sevante rolls for Initiative!",0,1,20,6,[1]],
-  ["Remorhaz","Dexterity Saving Throw: Remorhaz",0,1,20,7,[6]],
-  ["Akira","Call Lightning - Damage Roll (Lightning)",0,3,10,16,[7,7,2]],
-  ["Remorhaz","Dexterity Saving Throw: Remorhaz",0,1,20,17,[16]],
-  ["Akira","Call Lightning - Damage Roll (Lightning)",0,3,10,21,[9,9,3]],
-  ["Remorhaz","Wisdom Saving Throw: Remorhaz",0,1,20,17,[17]],
-  ["Remorhaz","Bite - Attack Roll",0,1,20,25,[14]],
-  ["Remorhaz","Bite - Damage Roll (Piercing, Fire)",0,6,10,52,[10,7,3,2,4,5]],
-  ["Remorhaz","Constitution Saving Throw: Remorhaz",0,1,20,16,[11]],
-  ["Akira","Blight - Damage Roll (Necrotic)",0,8,8,36,[1,7,7,6,3,4,4,4]],
-  ["Almorah","Witch Bolt - Attack Roll",0,1,20,16,[9]],
-  ["Sir Studly","Athletics Skill Check: Sir Studly",0,1,20,15,[7]],
-  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,17,[7]],
-  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,20,[10]],
-  ["Leeania","Longbow - Damage Roll (Piercing) [Arrow]",0,1,8,6,[1]],
-  ["Leeania","Longbow - Damage Roll (Piercing)",0,1,8,10,[5]],
-  ["Remorhaz","Bite - Attack Roll",0,1,20,23,[12]],
-  ["Remorhaz","Bite - Damage Roll (Piercing, Fire)",0,6,10,51,[4,4,10,8,2,8]],
-  ["Harshnag","Rock - Attack Roll",0,1,20,17,[8]],
-  ["Harshnag","Rock - Damage Roll (Bludgeoning)",0,4,10,40,[9,10,6,9]],
-  ["Giant Spider","Bite - Attack Roll",0,1,20,24,[19]],
-  ["Giant Spider","Bite - Damage Roll (Piercing)",0,1,8,5,[2]],
-  ["Remorhaz","Constitution Saving Throw: Remorhaz",0,1,20,25,[20]],
-  ["Almorah","Eldritch Blast - Attack Roll",0,1,20,11,[4]],
-  ["Almorah","Eldritch Blast - Attack Roll",0,1,20,9,[2]],
-  ["Sir Studly","Death Saving Throw: Sir Studly",0,1,20,11,[11]],
-  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,11,[1]],
-  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,26,[16]],
-  ["Leeania","Longbow - Damage Roll (Piercing)",0,1,8,8,[3]],
-  ["Leeania","Hunter's Mark - Damage Roll",0,1,6,5,[5]],
-  ["Sevante","Soulknife - Attack Roll",0,1,20,18,[10]],
-  ["Sevante","Soulknife - Damage Roll (Psychic)",0,1,6,8,[3]],
-  ["Sevante","Sneak Attack - Damage Roll",0,4,6,15,[3,3,4,5]],
-  ["Sevante","Soulknife - Attack Roll",0,1,20,27,[19]],
-  ["Sevante","Soulknife - Other Formula",0,1,4,9,[4]],
-  ["Remorhaz","Bite - Attack Roll",0,1,20,26,[15]],
-  ["Remorhaz","Bite - Damage Roll (Piercing, Fire)",0,6,10,57,[3,10,3,10,7,4]],
-  ["Harshnag","Gurt's Greataxe - Attack Roll",0,1,20,23,[8]],
-  ["Harshnag","Gurt's Greataxe - Damage Roll (Slashing)",0,3,12,29,[9,5,8]],
-  ["Akira","Healing Word - Healing",0,3,4,7,[1,1,2]],
-  ["Leeania","Potion of Greater Healing - Healing",0,4,4,9,[1,1,2,1]],
-  ["Akira","Roll Hit Dice: Akira",0,1,8,9,[6]],
-  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,11,[8]],
-  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,4,[1]],
-  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,8,[5]],
-  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,13,[10]],
-  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,7,[4]],
-  ["Akira","Roll Hit Dice: Akira",0,1,8,9,[6]],
-  ["Akira","Roll Hit Dice: Akira",0,1,8,7,[4]],
-  ["Akira","Roll Hit Dice: Akira",0,1,8,8,[5]],
-  ["Sevante","Sevante rolls for Initiative!",0,1,20,13,[8]],
-  ["Sir Studly","Sir Studly rolls for Initiative!",0,1,20,18,[18]],
-  ["Akira","Akira rolls for Initiative!",0,1,20,18,[17]],
-  ["Almorah","Almorah rolls for Initiative!",0,1,20,9,[6]],
-  ["Leeania","Leeania rolls for Initiative!",0,1,20,19,[16]],
-  ["Harshnag","Harshnag rolls for Initiative!",0,1,20,7,[8]],
-  ["Harshnag","Dexterity Saving Throw: Harshnag",0,1,20,19,[20]],
-  ["","",0,10,10,61,[9,7,8,7,7,2,5,6,9,1]],
-  ["Rat","Dexterity Saving Throw: Rat",0,1,20,8,[8]],
-  ["Almorah","Dexterity Saving Throw: Almorah",0,1,20,4,[1]],
-  ["Sir Studly","Dexterity Saving Throw: Sir Studly (Advantage)",1,2,20,11,[11,10]],
-  ["Almorah","Dexterity Saving Throw: Almorah (Advantage)",1,2,20,12,[3,9]],
-  ["","",0,10,10,57,[5,2,5,8,10,2,8,10,2,5]],
-  ["Akira","Healing Word - Healing",0,1,4,5,[2]],
-  ["Almorah","Potion of Greater Healing - Healing",0,4,4,13,[1,4,2,2]],
-  ["Sir Studly","Cure Wounds - Other Formula",0,1,8,5,[5]],
-  ["Akira","Healing Word - Healing",0,1,4,7,[4]],
-  ["","",0,1,8,8,[6]],
-  ["Leeania","Survival Skill Check: Leeania",0,1,20,11,[7]],
-  ["Ice Spiders","Stealth Skill Check: Ice Spider",0,1,20,20,[13]],
-  ["Almorah","Almorah rolls for Initiative!",0,1,20,19,[16]],
-  ["Ice Spiders","Ice Spiders rolls for Initiative!",0,1,20,19,[16]],
-  ["Ice Spiders","Ice Spiders rolls for Initiative!",0,1,20,21,[18]],
-  ["Ice Spiders","Ice Spiders rolls for Initiative!",0,1,20,13,[10]],
-  ["Ice Spiders","Ice Spiders rolls for Initiative!",0,1,20,14,[11]],
-  ["Sir Studly","Sir Studly rolls for Initiative!",0,1,20,3,[3]],
-  ["Leeania","Leeania rolls for Initiative!",0,1,20,19,[16]],
-  ["Akira","Akira rolls for Initiative!",0,1,20,19,[18]],
-  ["Sevante","Sevante rolls for Initiative!",0,1,20,18,[13]],
-  ["Ice Spiders","Web (Recharge 5-6) - Attack Roll",0,1,20,19,[14]],
-  ["Ice Spiders","Web (Recharge 5-6) - Attack Roll",0,1,20,14,[9]],
-  ["Ice Spiders","Web (Recharge 5-6) - Attack Roll",0,1,20,16,[11]],
-  ["Ice Spiders","Web (Recharge 5-6) - Attack Roll",0,1,20,10,[5]],
-  ["Ice Spiders","Bite - Attack Roll (Advantage)",1,2,20,21,[11,16]],
-  ["Ice Spiders","Bite - Damage Roll (Piercing)",0,1,8,5,[2]],
-  ["Sevante","Constitution Saving Throw: Sevante",0,1,20,21,[17]],
-  ["Ice Spiders","Bite - Attack Roll",0,1,20,13,[8]],
-  ["Giant Spider","Bite - Attack Roll",0,1,20,24,[19]],
-  ["Giant Spider","Bite - Damage Roll (Piercing)",0,1,8,11,[8]],
-  ["Ice Spiders","Constitution Saving Throw: Ice Spider",0,1,20,18,[17]],
-  ["Almorah","Strength Saving Throw: Almorah",0,1,20,19,[20]],
-  ["Ice Spiders","Wisdom Saving Throw: Ice Spider",0,1,20,10,[10]],
-  ["Sevante","Strength Ability Check: Sevante (Advantage)",1,2,20,16,[16,10]],
-  ["Sevante","Strength Ability Check: Sevante",0,1,20,9,[9]],
-  ["Sevante","Soulknife - Other Formula",0,1,4,7,[2]],
-  ["Sevante","Soulknife - Attack Roll (Disadvantage)",-1,2,20,22,[14,15]],
-  ["Sevante","Soulknife - Other Formula",0,1,4,8,[3]],
-  ["Ice Spiders","Bite - Attack Roll",0,1,20,13,[8]],
-  ["Ice Spiders","Bite - Attack Roll",0,1,20,6,[1]],
-  ["Sir Studly","Longsword - Attack Roll",0,1,20,15,[7]],
-  ["Sir Studly","Longsword - Damage Roll (Slashing)",0,1,8,8,[3]],
-  ["Sir Studly","Longsword - Attack Roll",0,1,20,11,[3]],
-  ["Ice Spiders","Bite - Attack Roll (Advantage)",1,2,20,20,[15,5]],
-  ["Ice Spiders","Bite - Damage Roll (Piercing)",0,1,8,9,[6]],
-  ["Sevante","Constitution Saving Throw: Sevante",0,1,20,9,[5]],
-  ["","",0,2,8,4,[2,2]],
-  ["Ice Spiders","Bite - Attack Roll (Advantage)",1,2,20,22,[17,15]],
-  ["Ice Spiders","Bite - Damage Roll (Piercing)",0,1,8,11,[8]],
-  ["Sevante","Constitution Saving Throw: Sevante",0,1,20,23,[19]],
-  ["Giant Spider","Bite - Attack Roll",0,1,20,11,[6]],
-  ["Ice Spiders","Bite - Attack Roll",0,1,20,8,[3]],
-  ["Almorah","Eldritch Blast - Attack Roll",0,1,20,17,[10]],
-  ["Almorah","Eldritch Blast - Damage Roll (Force)",0,1,10,9,[9]],
-  ["Almorah","Eldritch Blast - Attack Roll",0,1,20,13,[6]],
-  ["Leeania","Persuasion Skill Check: Leeania",0,1,20,18,[17]],
-  ["Sevante","Strength Ability Check: Sevante",0,1,20,18,[18]],
-  ["Ice Spiders","Bite - Attack Roll",0,1,20,12,[7]],
-  ["Ice Spiders","Bite - Attack Roll",0,1,20,11,[6]],
-  ["Sir Studly","Longsword - Attack Roll",0,1,20,27,[19]],
-  ["Sir Studly","Longsword - Damage Roll (Slashing)",0,1,8,12,[7]],
-  ["Sir Studly","Longsword - Attack Roll",0,1,20,14,[6]],
-  ["Sir Studly","Longsword - Damage Roll (Slashing)",0,1,8,11,[6]],
-  ["Ice Spiders","Bite - Attack Roll",0,1,20,8,[3]],
-  ["Giant Spider","Bite - Attack Roll",0,1,20,17,[12]],
-  ["Giant Spider","Bite - Damage Roll (Piercing)",0,1,8,11,[8]],
-  ["Leeania","Persuasion Skill Check: Leeania (Disadvantage)",-1,2,20,3,[11,2]],
-  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,12,[2]],
-  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,19,[9]],
-  ["Leeania","Longbow - Damage Roll (Piercing) [Arrow]",0,1,8,8,[3]],
-  ["Leeania","Hunter's Prey: Colossus Slayer - Damage Roll",0,1,8,4,[4]],
+const initialString = `["Griffon","Wisdom Saving Throw: Griffon",0,1,20,15,[14]]
+  ["Leeania","Animal Handling Skill Check: Leeania (Advantage)",1,2,20,13,[4,9]]
+  ["Akira","Perception Skill Check: Akira",0,1,20,8,[5]]
+  ["Sevante","Perception Skill Check: Sevante",0,1,20,17,[11]]
+  ["Remorhaz","Remorhaz rolls for Initiative!",0,1,20,5,[4]]
+  ["Harshnag","Harshnag rolls for Initiative!",0,1,20,3,[4]]
+  ["Akira","Akira rolls for Initiative!",0,1,20,14,[13]]
+  ["Sir Studly","Sir Studly rolls for Initiative!",0,1,20,12,[12]]
+  ["Almorah","Almorah rolls for Initiative!",0,1,20,13,[10]]
+  ["Leeania","Leeania rolls for Initiative!",0,1,20,10,[7]]
+  ["Sevante","Sevante rolls for Initiative!",0,1,20,6,[1]]
+  ["Remorhaz","Dexterity Saving Throw: Remorhaz",0,1,20,7,[6]]
+  ["Akira","Call Lightning - Damage Roll (Lightning)",0,3,10,16,[7,7,2]]
+  ["Remorhaz","Dexterity Saving Throw: Remorhaz",0,1,20,17,[16]]
+  ["Akira","Call Lightning - Damage Roll (Lightning)",0,3,10,21,[9,9,3]]
+  ["Remorhaz","Wisdom Saving Throw: Remorhaz",0,1,20,17,[17]]
+  ["Remorhaz","Bite - Attack Roll",0,1,20,25,[14]]
+  ["Remorhaz","Bite - Damage Roll (Piercing, Fire)",0,6,10,52,[10,7,3,2,4,5]]
+  ["Remorhaz","Constitution Saving Throw: Remorhaz",0,1,20,16,[11]]
+  ["Akira","Blight - Damage Roll (Necrotic)",0,8,8,36,[1,7,7,6,3,4,4,4]]
+  ["Almorah","Witch Bolt - Attack Roll",0,1,20,16,[9]]
+  ["Sir Studly","Athletics Skill Check: Sir Studly",0,1,20,15,[7]]
+  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,17,[7]]
+  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,20,[10]]
+  ["Leeania","Longbow - Damage Roll (Piercing) [Arrow]",0,1,8,6,[1]]
+  ["Leeania","Longbow - Damage Roll (Piercing)",0,1,8,10,[5]]
+  ["Remorhaz","Bite - Attack Roll",0,1,20,23,[12]]
+  ["Remorhaz","Bite - Damage Roll (Piercing, Fire)",0,6,10,51,[4,4,10,8,2,8]]
+  ["Harshnag","Rock - Attack Roll",0,1,20,17,[8]]
+  ["Harshnag","Rock - Damage Roll (Bludgeoning)",0,4,10,40,[9,10,6,9]]
+  ["Giant Spider","Bite - Attack Roll",0,1,20,24,[19]]
+  ["Giant Spider","Bite - Damage Roll (Piercing)",0,1,8,5,[2]]
+  ["Remorhaz","Constitution Saving Throw: Remorhaz",0,1,20,25,[20]]
+  ["Almorah","Eldritch Blast - Attack Roll",0,1,20,11,[4]]
+  ["Almorah","Eldritch Blast - Attack Roll",0,1,20,9,[2]]
+  ["Sir Studly","Death Saving Throw: Sir Studly",0,1,20,11,[11]]
+  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,11,[1]]
+  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,26,[16]]
+  ["Leeania","Longbow - Damage Roll (Piercing)",0,1,8,8,[3]]
+  ["Leeania","Hunter's Mark - Damage Roll",0,1,6,5,[5]]
+  ["Sevante","Soulknife - Attack Roll",0,1,20,18,[10]]
+  ["Sevante","Soulknife - Damage Roll (Psychic)",0,1,6,8,[3]]
+  ["Sevante","Sneak Attack - Damage Roll",0,4,6,15,[3,3,4,5]]
+  ["Sevante","Soulknife - Attack Roll",0,1,20,27,[19]]
+  ["Sevante","Soulknife - Other Formula",0,1,4,9,[4]]
+  ["Remorhaz","Bite - Attack Roll",0,1,20,26,[15]]
+  ["Remorhaz","Bite - Damage Roll (Piercing, Fire)",0,6,10,57,[3,10,3,10,7,4]]
+  ["Harshnag","Gurt's Greataxe - Attack Roll",0,1,20,23,[8]]
+  ["Harshnag","Gurt's Greataxe - Damage Roll (Slashing)",0,3,12,29,[9,5,8]]
+  ["Akira","Spear - Damage Roll (Piercing)",0,1,6,6,[6]]
+  ["Akira","Healing Word - Healing",0,3,4,7,[1,1,2]]
+  ["Leeania","Potion of Greater Healing - Healing",0,4,4,9,[1,1,2,1]]
+  ["Akira","Roll Hit Dice: Akira",0,1,8,9,[6]]
+  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,11,[8]]
+  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,4,[1]]
+  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,8,[5]]
+  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,13,[10]]
+  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,7,[4]]
+  ["Akira","Roll Hit Dice: Akira",0,1,8,9,[6]]
+  ["Akira","Roll Hit Dice: Akira",0,1,8,7,[4]]
+  ["Akira","Roll Hit Dice: Akira",0,1,8,8,[5]]
+  ["Sevante","Sevante rolls for Initiative!",0,1,20,13,[8]]
+  ["Sir Studly","Sir Studly rolls for Initiative!",0,1,20,18,[18]]
+  ["Akira","Akira rolls for Initiative!",0,1,20,18,[17]]
+  ["Almorah","Almorah rolls for Initiative!",0,1,20,9,[6]]
+  ["Leeania","Leeania rolls for Initiative!",0,1,20,19,[16]]
+  ["Harshnag","Harshnag rolls for Initiative!",0,1,20,7,[8]]
+  ["Harshnag","Dexterity Saving Throw: Harshnag",0,1,20,19,[20]]
+  ["","",0,10,10,61,[9,7,8,7,7,2,5,6,9,1]]
+  ["Rat","Dexterity Saving Throw: Rat",0,1,20,8,[8]]
+  ["Almorah","Dexterity Saving Throw: Almorah",0,1,20,4,[1]]
+  ["Sir Studly","Dexterity Saving Throw: Sir Studly (Advantage)",1,2,20,11,[11,10]]
+  ["Almorah","Dexterity Saving Throw: Almorah (Advantage)",1,2,20,12,[3,9]]
+  ["","",0,10,10,57,[5,2,5,8,10,2,8,10,2,5]]
+  ["Akira","Healing Word - Healing",0,1,4,5,[2]]
+  ["Almorah","Potion of Greater Healing - Healing",0,4,4,13,[1,4,2,2]]
+  ["Sir Studly","Cure Wounds - Other Formula",0,1,8,5,[5]]
+  ["Akira","Healing Word - Healing",0,1,4,7,[4]]
+  ["","",0,1,8,8,[6]]
+  ["Leeania","Survival Skill Check: Leeania",0,1,20,11,[7]]
+  ["Ice Spiders","Stealth Skill Check: Ice Spider",0,1,20,20,[13]]
+  ["Almorah","Almorah rolls for Initiative!",0,1,20,19,[16]]
+  ["Ice Spiders","Ice Spiders rolls for Initiative!",0,1,20,19,[16]]
+  ["Ice Spiders","Ice Spiders rolls for Initiative!",0,1,20,21,[18]]
+  ["Ice Spiders","Ice Spiders rolls for Initiative!",0,1,20,13,[10]]
+  ["Ice Spiders","Ice Spiders rolls for Initiative!",0,1,20,14,[11]]
+  ["Sir Studly","Sir Studly rolls for Initiative!",0,1,20,3,[3]]
+  ["Leeania","Leeania rolls for Initiative!",0,1,20,19,[16]]
+  ["Akira","Akira rolls for Initiative!",0,1,20,19,[18]]
+  ["Sevante","Sevante rolls for Initiative!",0,1,20,18,[13]]
+  ["Ice Spiders","Web (Recharge 5-6) - Attack Roll",0,1,20,19,[14]]
+  ["Ice Spiders","Web (Recharge 5-6) - Attack Roll",0,1,20,14,[9]]
+  ["Ice Spiders","Web (Recharge 5-6) - Attack Roll",0,1,20,16,[11]]
+  ["Ice Spiders","Web (Recharge 5-6) - Attack Roll",0,1,20,10,[5]]
+  ["Ice Spiders","Bite - Attack Roll (Advantage)",1,2,20,21,[11,16]]
+  ["Ice Spiders","Bite - Damage Roll (Piercing)",0,1,8,5,[2]]
+  ["Sevante","Constitution Saving Throw: Sevante",0,1,20,21,[17]]
+  ["Ice Spiders","Bite - Attack Roll",0,1,20,13,[8]]
+  ["Giant Spider","Bite - Attack Roll",0,1,20,24,[19]]
+  ["Giant Spider","Bite - Damage Roll (Piercing)",0,1,8,11,[8]]
+  ["Ice Spiders","Constitution Saving Throw: Ice Spider",0,1,20,18,[17]]
+  ["Almorah","Strength Saving Throw: Almorah",0,1,20,19,[20]]
+  ["Ice Spiders","Wisdom Saving Throw: Ice Spider",0,1,20,10,[10]]
+  ["Sevante","Strength Ability Check: Sevante (Advantage)",1,2,20,16,[16,10]]
+  ["Sevante","Strength Ability Check: Sevante",0,1,20,9,[9]]
+  ["Sevante","Soulknife - Other Formula",0,1,4,7,[2]]
+  ["Sevante","Soulknife - Attack Roll (Disadvantage)",-1,2,20,22,[14,15]]
+  ["Sevante","Soulknife - Other Formula",0,1,4,8,[3]]
+  ["Ice Spiders","Bite - Attack Roll",0,1,20,13,[8]]
+  ["Ice Spiders","Bite - Attack Roll",0,1,20,6,[1]]
+  ["Sir Studly","Longsword - Attack Roll",0,1,20,15,[7]]
+  ["Sir Studly","Longsword - Damage Roll (Slashing)",0,1,8,8,[3]]
+  ["Sir Studly","Longsword - Attack Roll",0,1,20,11,[3]]
+  ["Ice Spiders","Bite - Attack Roll (Advantage)",1,2,20,20,[15,5]]
+  ["Ice Spiders","Bite - Damage Roll (Piercing)",0,1,8,9,[6]]
+  ["Sevante","Constitution Saving Throw: Sevante",0,1,20,9,[5]]
+  ["","",0,2,8,4,[2,2]]
+  ["Ice Spiders","Bite - Attack Roll (Advantage)",1,2,20,22,[17,15]]
+  ["Ice Spiders","Bite - Damage Roll (Piercing)",0,1,8,11,[8]]
+  ["Sevante","Constitution Saving Throw: Sevante",0,1,20,23,[19]]
+  ["Giant Spider","Bite - Attack Roll",0,1,20,11,[6]]
+  ["Ice Spiders","Bite - Attack Roll",0,1,20,8,[3]]
+  ["Almorah","Eldritch Blast - Attack Roll",0,1,20,17,[10]]
+  ["Almorah","Eldritch Blast - Damage Roll (Force)",0,1,10,9,[9]]
+  ["Almorah","Eldritch Blast - Attack Roll",0,1,20,13,[6]]
+  ["Leeania","Persuasion Skill Check: Leeania",0,1,20,18,[17]]
+  ["Sevante","Strength Ability Check: Sevante",0,1,20,18,[18]]
+  ["Ice Spiders","Bite - Attack Roll",0,1,20,12,[7]]
+  ["Ice Spiders","Bite - Attack Roll",0,1,20,11,[6]]
+  ["Sir Studly","Longsword - Attack Roll",0,1,20,27,[19]]
+  ["Sir Studly","Longsword - Damage Roll (Slashing)",0,1,8,12,[7]]
+  ["Sir Studly","Longsword - Attack Roll",0,1,20,14,[6]]
+  ["Sir Studly","Longsword - Damage Roll (Slashing)",0,1,8,11,[6]]
+  ["Ice Spiders","Bite - Attack Roll",0,1,20,8,[3]]
+  ["Giant Spider","Bite - Attack Roll",0,1,20,17,[12]]
+  ["Giant Spider","Bite - Damage Roll (Piercing)",0,1,8,11,[8]]
+  ["Leeania","Persuasion Skill Check: Leeania (Disadvantage)",-1,2,20,3,[11,2]]
+  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,12,[2]]
+  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,19,[9]]
+  ["Leeania","Longbow - Damage Roll (Piercing) [Arrow]",0,1,8,8,[3]]
+  ["Leeania","Hunter's Prey: Colossus Slayer - Damage Roll",0,1,8,4,[4]]
   ["Giant Spider","Stealth Skill Check: Giant Spider",0,1,20,13,[6]]
-]
+  ["Almorah","Draws a result from the Items-in-a-Giant's-Bag table.",0,1,50,34,[34]]
+  ["Almorah","Draws a result from the Items-in-a-Giant's-Bag table.",0,1,50,45,[45]]
+  ["Sir Studly","Investigation Skill Check: Sir Studly",0,1,20,-1,[1]]
+  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,8,[5]]
+  ["Sir Studly","Roll Hit Dice: Sir Studly",0,1,10,11,[8]]
+  ["Almorah","Roll Hit Dice: Almorah",0,1,8,5,[3]]
+  ["Almorah","Roll Hit Dice: Almorah",0,1,8,9,[7]]
+  ["Sevante","Roll Hit Dice: Sevante",0,1,8,8,[7]]
+  ["Sevante","Roll Hit Dice: Sevante",0,1,8,4,[3]]
+  ["Sevante","Roll Hit Dice: Sevante",0,1,8,4,[3]]
+  ["Sevante","Roll Hit Dice: Sevante",0,1,8,5,[4]]
+  ["Sevante","Roll Hit Dice: Sevante",0,1,8,9,[8]]
+  ["Akira","History Skill Check: Akira",0,1,20,7,[7]]
+  ["Akira","History Skill Check: Akira",0,1,20,17,[17]]
+  ["Sir Studly","Sir Studly rolls for Initiative!",0,1,20,8,[8]]
+  ["Almorah","Almorah rolls for Initiative!",0,1,20,5,[2]]
+  ["Akira","Akira rolls for Initiative!",0,1,20,8,[7]]
+  ["Iymrith","Iymrith rolls for Initiative!",0,1,20,10,[10]]
+  ["Harshnag","Harshnag rolls for Initiative!",0,1,20,15,[16]]
+  ["Sevante","Sevante rolls for Initiative!",0,1,20,8,[3]]
+  ["Leeania","Leeania rolls for Initiative!",0,1,20,7,[4]]
+  ["Harshnag","Gurt's Greataxe - Attack Roll",0,1,20,24,[9]]
+  ["Harshnag","Gurt's Greataxe - Damage Roll (Slashing)",0,3,12,32,[7,11,7]]
+  ["Harshnag","Gurt's Greataxe - Attack Roll",0,1,20,19,[4]]
+  ["","",0,1,4,3,[3]]
+  ["Harshnag","Gurt's Greataxe - Damage Roll (Slashing)",0,3,12,17,[3,3,4]]
+  ["Akira","Dexterity Saving Throw: Akira",0,1,20,18,[17]]
+  ["Harshnag","Dexterity Saving Throw: Harshnag",0,1,20,4,[4]]
+  ["Sir Studly","Dexterity Saving Throw: Sir Studly",0,1,20,15,[14]]
+  ["Iymrith","Lightning Breath - Damage Roll (Lightning)",0,16,10,100,[8,6,9,9,4,3,7,4,1,4,8,7,5,6,9,10]]
+  ["Akira","Healing Word - Healing",0,3,4,10,[4,2,1]]
+  ["Sevante","Shortbow - Attack Roll [Arrow]",0,1,20,24,[16]]
+  ["Sevante","Shortbow - Damage Roll (Piercing) [Arrow]",0,1,6,9,[4]]
+  ["Leeania","Cure Wounds - Other Formula",0,1,8,7,[7]]
+  ["Leeania","Cure Wounds - Other Formula",0,1,8,8,[8]]
+  ["Harshnag","Gurt's Greataxe - Damage Roll (Slashing)",0,3,12,27,[6,4,10]]
+  ["Harshnag","Gurt's Greataxe - Damage Roll (Slashing)",0,3,12,33,[12,6,8]]
+  ["Iymrith","Bite - Attack Roll",0,1,20,34,[18]]
+  ["Iymrith","Bite - Damage Roll (Piercing, Lightning)",0,2,10,35,[3,10]]
+  ["Griffon","Wisdom Saving Throw: Griffon",0,1,20,20,[19]]
+  ["Almorah","Animal Handling Skill Check: Almorah",0,1,20,11,[9]]
+  ["Akira","Animal Handling Skill Check: Akira",0,1,20,11,[5]]
+  ["Leeania","Animal Handling Skill Check: Leeania",0,1,20,11,[7]]
+  ["Sevante","Animal Handling Skill Check: Sevante",0,1,20,16,[13]]
+  ["Leeania","Survival Skill Check: Leeania",0,1,20,14,[10]]
+  ["Sevante","Perception Skill Check: Sevante",0,1,20,10,[4]]
+  ["Leeania","Perception Skill Check: Leeania",0,1,20,10,[6]]
+  ["Sir Studly","Sir Studly rolls for Initiative!",0,1,20,10,[10]]
+  ["Winter Wolf","Winter Wolf rolls for Initiative!",0,1,20,9,[8]]
+  ["Winter Wolf","Winter Wolf rolls for Initiative!",0,1,20,8,[7]]
+  ["Akira","Akira rolls for Initiative!",0,1,20,15,[14]]
+  ["Leeania","Leeania rolls for Initiative!",0,1,20,21,[18]]
+  ["Almorah","Almorah rolls for Initiative!",0,1,20,19,[16]]
+  ["Sevante","Sevante rolls for Initiative!",0,1,20,8,[3]]
+  ["Winter Wolf","Wisdom Saving Throw: Winter Wolf",0,1,20,19,[18]]
+  ["Almorah","Eldritch Blast - Attack Roll",0,1,20,20,[13]]
+  ["Almorah","Eldritch Blast - Damage Roll (Force)",0,1,10,11,[7]]
+  ["Almorah","Eldritch Blast - Attack Roll",0,1,20,17,[10]]
+  ["Almorah","Eldritch Blast - Damage Roll (Force)",0,1,10,11,[7]]
+  ["Giant Spider","Web - Attack Roll",0,1,20,20,[15]]
+  ["Sir Studly","Dexterity Saving Throw: Sir Studly",0,1,20,2,[1]]
+  ["Sevante","Dexterity Saving Throw: Sevante",0,1,20,19,[11]]
+  ["Leeania","Dexterity Saving Throw: Leeania",0,1,20,16,[10]]
+  ["Winter Wolf","Cold Breath - Damage Roll (Cold)",0,4,8,20,[4,8,6,2]]
+  ["Sevante","Soulknife - Attack Roll",0,1,20,10,[2]]
+  ["Sevante","Soulknife - Attack Roll",0,1,20,16,[8]]
+  ["Sevante","Soulknife - Other Formula",0,1,4,8,[3]]
+  ["Winter Wolf","Strength Saving Throw: Winter Wolf",0,1,20,5,[1]]
+  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,18,[8]]
+  ["Leeania","Longbow - Damage Roll (Piercing) [Arrow]",0,1,8,11,[6]]
+  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,18,[8]]
+  ["Leeania","Longbow - Damage Roll (Piercing) [Arrow]",0,1,8,6,[1]]
+  ["Winter Wolf","Strength Saving Throw: Winter Wolf",0,1,20,7,[3]]
+  ["Almorah","Arms of Hadar - Damage Roll (Necrotic)",0,5,6,14,[4,2,4,1,3]]
+  ["Akira (Giant Spider)","Bite - Attack Roll (Advantage)",1,2,20,26,[12,16]]
+  ["Akira (Giant Spider)","Bite - Damage Roll (Piercing)",0,1,8,4,[1]]
+  ["Winter Wolf","Constitution Saving Throw: Winter Wolf",0,1,20,15,[13]]
+  ["Sir Studly","Longsword - Damage Roll (Slashing)",0,1,10,13,[8]]
+  ["Sir Studly","Longsword - Attack Roll",0,1,20,17,[9]]
+  ["Sir Studly","Divine Smite - Damage Roll (Radiant)",0,2,8,11,[7,4]]
+  ["Sevante","Soulknife - Attack Roll",0,1,20,21,[13]]
+  ["Sevante","Soulknife - Damage Roll (Psychic)",0,1,6,10,[5]]
+  ["Sevante","Soulknife - Attack Roll",0,1,20,12,[4]]
+  ["Akira (Giant Spider)","Bite - Damage Roll (Piercing)",0,2,8,13,[6,7]]
+  ["Winter Wolf","Strength Saving Throw: Winter Wolf",0,1,20,9,[5]]
+  ["Leeania","Longbow - Attack Roll [Arrow]",0,1,20,24,[14]]
+  ["Leeania","Longbow - Damage Roll (Piercing) [Arrow]",0,1,8,13,[8]]
+  ["Leeania","Longbow - Attack Roll [Arrow] (Advantage)",1,2,20,20,[10,10]]
+  ["Leeania","Longbow - Damage Roll (Piercing)",0,1,8,6,[1]]
+  ["Almorah","Cloud of Daggers - Damage Roll (Slashing)",0,8,4,16,[3,1,3,1,2,2,2,2]]
+  ["Akira (Giant Spider)","Bite - Attack Roll (Advantage)",1,2,20,30,[18,20]]
+  ["Akira (Giant Spider)","Bite - Damage Roll (Piercing) (Critical Hit)",0,2,8,13,[4,6]]
+  ["Winter Wolf","Constitution Saving Throw: Winter Wolf",0,1,20,15,[13]]
+  ["Akira (Giant Spider)","Bite - Damage Roll (Piercing)",0,2,8,8,[6,2]]
+  ["Giant Spider","Acrobatics Skill Check: Giant Spider (Advantage)",1,2,20,7,[3,4]]
+  ["Giant Spider","Acrobatics Skill Check: Giant Spider",0,1,20,22,[19]]
+  ["Sevante","Perception Skill Check: Sevante",0,1,20,11,[5]]
+  ["Leeania","Perception Skill Check: Leeania",0,1,20,24,[20]]
+  ["","",0,1,10,3,[3]]
+  ["","",0,1,8,4,[3]]
+  ["","",0,1,8,4,[2]]
+  ["","",0,1,10,8,[8]]
+  ["","",0,1,8,11,[8]]`;
+
+const rawArray = initialString.split(`\n`);
+
+let dataTable = new Array(rawArray.length);
+
+//create a table of values from the info
+for (let i = 0; i < rawArray.length; i++) {
+  dataTable[i] = JSON.parse(rawArray[i]);
+}
+
+export const showcaseData = dataTable;
