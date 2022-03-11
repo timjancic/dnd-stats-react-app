@@ -10,6 +10,7 @@ import DamageDeltPlot from './components/damageDeltPlot.jsx';
 import DamageMaxPlot from './components/damageMaxPlot.jsx';
 import SkillsUsedPlot from './components/skillsUsedPlot.jsx';
 import AbilitiesUsedPlot from './components/abilitiesUsedPlot.jsx';
+import GeneralAveragesPlot from './components/generalAveragesPlot.jsx';
 
 let showcaseStats = makeProfiles(["Almorah","Akira","Leeania","Sevante","Sir Studly"],showcaseData);
 
@@ -152,20 +153,18 @@ class App extends Component {
           <button type="submit" className="btn btn-primary mb-3" onClick={() => this.handleSubmitNames()}>Submit</button>
         </div>
         <hr />
-        <div className="row align-items-md-stretch">
-          <div className="col-md-6">
+        <div className="row">
+          <div className="col">
             <D20RollsPlot
               pcNames={this.state.pcNames}
               pcStats={this.state.pcStats}
             />
           </div>
-          <div className="col-md-6">
-            <div className="h-100 p-5 bg-light border rounded-3">
-              <AdvantagePlot
-                pcNames={this.state.pcNames}
-                pcStats={this.state.pcStats}
-              />
-            </div>
+          <div className="col">
+            <GeneralAveragesPlot
+              pcNames={this.state.pcNames}
+              pcStats={this.state.pcStats}
+            />
           </div>
         </div>
         <div className="row">
