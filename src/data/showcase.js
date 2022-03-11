@@ -242,7 +242,15 @@ const initialString = `["Griffon","Wisdom Saving Throw: Griffon",0,1,20,15,[14]]
   ["","",0,1,8,4,[3]]
   ["","",0,1,8,4,[2]]
   ["","",0,1,10,8,[8]]
-  ["","",0,1,8,11,[8]]`;
+  ["","",0,1,8,11,[8]]
+  ["Almorah","Persuasion Skill Check: Almorah (Advantage)",1,2,20,22,[17,18]]
+  ["Sevante","Persuasion Skill Check: Sevante",0,1,20,15,[13]]
+  ["Guard","Wisdom Saving Throw: Guard",0,1,20,1,[1]]
+  ["Guard","Wisdom Saving Throw: Guard",0,1,20,15,[15]]
+  ["Guard","Wisdom Saving Throw: Guard",0,1,20,14,[14]]
+  ["Sevante","Athletics Skill Check: Sevante",0,1,20,24,[18]]
+  ["Guard","Athletics Skill Check: Guard",0,1,20,5,[4]]
+  ["Sevante","Wisdom Saving Throw: Sevante",0,1,20,21,[18]]`;
 
 const rawArray = initialString.split(`\n`);
 
