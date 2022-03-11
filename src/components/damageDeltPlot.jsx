@@ -27,7 +27,8 @@ class DamageDeltPlot extends Component {
             yaxis: {
               title: {
                 text: "Sum of damage delt"
-              }
+              },
+              gridcolor: "black"
             },
           }}
         />

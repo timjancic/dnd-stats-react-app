@@ -27,7 +27,8 @@ class DamageMaxPlot extends Component {
             yaxis: {
               title: {
                 text: "Amount of Damage"
-              }
+              },
+              gridcolor: "black"
             },
           }}
         />

@@ -28,7 +28,8 @@ class AbilitiesUsedPlot extends Component {
             yaxis: {
               title: {
                 text: "sum of times ability was used"
-              }
+              },
+              gridcolor: "black"
             },
             xaxis: {
               tickvals: abilities

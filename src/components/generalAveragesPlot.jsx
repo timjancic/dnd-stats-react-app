@@ -28,7 +28,8 @@ class GeneralAveragesPlot extends Component {
             yaxis: {
               title: {
                 text: "average"
-              }
+              },
+              gridcolor: "black"
             },
             xaxis: {
               tickvals: avgNames

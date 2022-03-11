@@ -28,7 +28,8 @@ class SkillsUsedPlot extends Component {
             yaxis: {
               title: {
                 text: "sum of times value was rolled"
-              }
+              },
+              gridcolor: "black"
             },
             xaxis: {
               title: {
