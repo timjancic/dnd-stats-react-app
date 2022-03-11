@@ -20,7 +20,7 @@ export function makeProfiles(pcArrayInput,dataTable) {
     for (let i = 0; i < dataTable.length; i++) {
       for (let j = 0; j < pcArray.length; j++) {
         //match rows with the same alias
-        if (dataTable[i][0].includes(pcArray[j])) {
+        if (dataTable[i][0].toLowerCase().includes(pcArray[j].toLowerCase())) {
           pcData[j].push(dataTable[i]);
           break; //break the for loop since there is only be one alias per row of data.
         } else if (dataTable[i][0] != "" && j == pcArray.length - 1){
