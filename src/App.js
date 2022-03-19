@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./App.css";
 import Plot from "react-plotly.js";
+import ReactModal from 'react-modal';
 import { showcaseData } from "./data/showcase.js";
 import StatsProfile from "./components/StatsProfile.js";
 import { makeProfiles } from "./components/makeProfiles.js";
@@ -11,6 +12,7 @@ import DamageMaxPlot from './components/damageMaxPlot.jsx';
 import SkillsUsedPlot from './components/skillsUsedPlot.jsx';
 import AbilitiesUsedPlot from './components/abilitiesUsedPlot.jsx';
 import GeneralAveragesPlot from './components/generalAveragesPlot.jsx';
+import ModalAbout from './components/modalAbout.jsx';
 
 let showcaseStats = makeProfiles(["Almorah","Akira","Leeania","Sevante","Sir Studly"],showcaseData);
 
@@ -21,7 +23,8 @@ class App extends Component {
     pcInput: ["Almorah","Akira","Leeania","Sevante","Sir Studly","","",""],
     pcNames: ["Almorah","Akira","Leeania","Sevante","Sir Studly"],
     pcStats: showcaseStats[0],
-    dmStats: showcaseStats[1]
+    dmStats: showcaseStats[1],
+    showModalAbout: false
   };
 
   handleSubmitNames = () => {
@@ -54,20 +57,33 @@ class App extends Component {
     });
   }
 
+  handleOpenModalAbout = () => {
+    this.setState({showModalAbout: true});
+  }
+
+  handleCloseModalAbout = () => {
+    this.setState({showModalAbout: false});
+  }
+
   render() {
     return (
       <div className="px-4 py-2 my-5">
         <h1 className="display-5 fw-bold text-center">Dungeons & Dragons Stats</h1>
         <div className="col-lg-6 mx-auto text-center">
-          <p className="lead mb-4">
+          <p className="lead mb-1">
             Quickly figure out who sucks at rolling dice in your Foundry VTT D&D
             campaign.
           </p>
-          <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-2">
-            <button type="button" className="btn btn-primary btn-lg px-4 gap-3">
-              Use your own data
-            </button>
-          </div>
+          <button type="button" className="btn btn-link btn-small mb-4" onClick={this.handleOpenModalAbout}>
+            What is this?
+          </button>
+          <ModalAbout
+            isOpen={this.state.showModalAbout}
+            onClose={this.handleCloseModalAbout}
+          />
+          <p className="lead mb-1 text-decoration-underline">
+            Names of Player Characters
+          </p>
         </div>
         <div className="d-flex justify-content-center">
           <form className="row g-3 mb-2">
@@ -149,8 +165,13 @@ class App extends Component {
             </div>
           </form>
         </div>
-        <div className="col-lg-6 mx-auto text-center mt-2">
+        <div className="col-lg-6 mx-auto text-center mt-2 mb-4">
           <button type="submit" className="btn btn-primary mb-3" onClick={() => this.handleSubmitNames()}>Submit</button>
+        </div>
+        <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-2">
+          <button type="button" className="btn btn-primary btn-lg px-4 gap-3">
+            Use your own data
+          </button>
         </div>
         <hr />
         <div className="row">
