@@ -1,0 +1,35 @@
+//This is macro for FoundryVTT that you can copy and paste. In your D&D world in Foundry, run this macro and it will print the data in a new journal.
+//This data is formatted specifically for the web app.
+
+let dataAll = [];
+
+for (let i = 0; i < game.data.messages.length; i++) {
+  let messageData = game.data.messages[i]
+
+  if (messageData.roll) {
+    const rollData = JSON.parse(messageData.roll); //turn string into object
+    const alias = messageData.speaker.alias ? messageData.speaker.alias : ""; //assign only if it exists
+    const flavor = messageData.flavor ? messageData.flavor : "";
+    const advantageMode = rollData.options.advantageMode != undefined ? rollData.options.advantageMode : 0;
+    const nDice = rollData.terms[0].number;
+    const faces = rollData.terms[0].faces;
+
+    let results = [];
+    for (let i = 0; i < rollData.terms[0].results.length; i++) {
+      results.push(rollData.terms[0].results[i].result);
+    }
+    const total = rollData.total;
+
+    const dataRoll = [`"${alias}"`,`"${flavor}"`,advantageMode,nDice,faces,total,JSON.stringify(results)];
+
+    dataAll.push(dataRoll);
+  }
+}
+
+let dataString = ``;
+
+for (let i = 0; i < dataAll.length; i++) {
+  dataString = dataString + `[${dataAll[i]}]<br>`;
+}
+
+JournalEntry.create({name: "Roll Data", content: `<p>${dataString}</p>`});
