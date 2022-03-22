@@ -7,6 +7,30 @@ const ModalAbout = (props) => {
     <ReactModal
       isOpen={props.isOpen}
       ariaHideApp={false}
+      style={{
+        overlay: {
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(255, 255, 255, 0.75)'
+        },
+        content: {
+          position: 'absolute',
+          top: '20px',
+          left: '20%',
+          right: '20%',
+          bottom: '20px',
+          border: '1px solid #ccc',
+          background: '#fff',
+          overflow: 'auto',
+          WebkitOverflowScrolling: 'touch',
+          borderRadius: '4px',
+          outline: 'none',
+          padding: '40px'
+        }
+      }}
     >
       <div className="modal-header text-center">
         <h2 className="modal-title" >FAQ</h2>
@@ -38,7 +62,7 @@ const ModalAbout = (props) => {
         <h5>How accurate are these plots?</h5>
         <p className="mx-3">
           They are accurate but are most likely missing or misinterpreting data. It is mainly limited by what is recorded on FoundryVTT.
-          Often times the damage from dice is halved or rolls were accidentally made with the wrong skill/weapon/character. 
+          Often times the damage from dice is halved or rolls were accidentally made with the wrong skill/weapon/character.
           But because these facts are not recorded, they don't show up on the plots. These results are best enjoyed with that in mind.
         </p>
         <h5>How does this work?</h5>
