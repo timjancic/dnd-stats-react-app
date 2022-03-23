@@ -13,6 +13,7 @@ import SkillsUsedPlot from './components/skillsUsedPlot.jsx';
 import AbilitiesUsedPlot from './components/abilitiesUsedPlot.jsx';
 import GeneralAveragesPlot from './components/generalAveragesPlot.jsx';
 import ModalAbout from './components/modalAbout.jsx';
+import ModalData from './components/modalData.jsx';
 
 let showcaseStats = makeProfiles(["Almorah","Akira","Leeania","Sevante","Sir Studly"],showcaseData);
 
@@ -24,11 +25,12 @@ class App extends Component {
     pcNames: ["Almorah","Akira","Leeania","Sevante","Sir Studly"],
     pcStats: showcaseStats[0],
     dmStats: showcaseStats[1],
-    showModalAbout: false
+    fileName: "Showcase Data",
+    showModalAbout: false,
+    showModalData: false
   };
 
   handleSubmitNames = () => {
-    console.log("submit buttons was pressed");
 
     let temp;
     let newNamesShort;
@@ -60,9 +62,27 @@ class App extends Component {
   handleOpenModalAbout = () => {
     this.setState({showModalAbout: true});
   }
-
   handleCloseModalAbout = () => {
     this.setState({showModalAbout: false});
+  }
+
+  handleOpenModalData = () => {
+    this.setState({showModalData: true});
+  }
+  handleCloseModalData = () => {
+    this.setState({showModalData: false});
+  }
+
+  handleFileNameChange = (value) => {
+    this.setState({fileName: value})
+  }
+
+  handleDataUpload = (data) => {
+    this.setState({
+      currentData: data
+    })
+
+    this.handleSubmitNames();
   }
 
   render() {
@@ -169,9 +189,20 @@ class App extends Component {
           <button type="submit" className="btn btn-primary mb-3" onClick={() => this.handleSubmitNames()}>Submit</button>
         </div>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-2">
-          <button type="button" className="btn btn-primary btn-lg px-4 gap-3">
+          <button type="button" className="btn btn-primary btn-lg px-4 gap-3" onClick={this.handleOpenModalData}>
             Use your own data
           </button>
+        </div>
+        <ModalData
+          isOpen={this.state.showModalData}
+          onClose={this.handleCloseModalData}
+          onUpload={this.handleDataUpload}
+          onFileNameChange={this.handleFileNameChange}
+        />
+        <div className="col-lg-6 mx-auto text-center">
+          <p className="lead mb-1">
+            Viewing results from: {this.state.fileName}
+          </p>
         </div>
         <hr />
         <div className="row">
@@ -217,35 +248,6 @@ class App extends Component {
           </div>
         </div>
 
-        <div className="row align-items-md-stretch">
-          <div className="col-md-6">
-            <div className="h-100 p-5 text-white bg-dark rounded-3">
-              <h2>Change the background</h2>
-              <p>
-                Swap the background-color utility and add a `.text-*` color
-                utility to mix up the jumbotron look. Then, mix and match with
-                additional component themes and more.
-              </p>
-              <button className="btn btn-outline-light" type="button">
-                Example button
-              </button>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="h-100 p-5 bg-light border rounded-3">
-              <h2>Add borders</h2>
-              <p>
-                Or, keep it light and add a border for some added definition to
-                the boundaries of your content. Be sure to look under the hood
-                at the source HTML here as we've adjusted the alignment and
-                sizing of both column's content for equal-height.
-              </p>
-              <button className="btn btn-outline-secondary" type="button">
-                Example button
-              </button>
-            </div>
-          </div>
-        </div>
         <footer className="pt-2 mt-4 text-muted border-top text-left">
           Web App created by Timothy Jancic
         </footer>
