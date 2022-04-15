@@ -15,9 +15,15 @@ for (let i = 0; i < game.data.messages.length; i++) {
     const faces = rollData.terms[0].faces;
 
     let results = [];
-    for (let i = 0; i < rollData.terms[0].results.length; i++) {
-      results.push(rollData.terms[0].results[i].result);
+    //sometimes a message gets categorized as a roll but is just a number with no result, this if statement handles that case
+    if (rollData.terms[0].results) {
+      for (let j = 0; j < rollData.terms[0].results.length; j++) {
+        results.push(rollData.terms[0].results[j].result);
+      }
+    } else {
+      results.push(-1);
     }
+
     const total = rollData.total;
 
     const dataRoll = [`"${alias}"`,`"${flavor}"`,advantageMode,nDice,faces,total,JSON.stringify(results)];
