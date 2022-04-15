@@ -121,7 +121,7 @@ class ModalData extends Component {
               }
             }>
             </textarea>
-            <label className="form-label" for="textAreaExample">Copy and paste not working yet</label>
+            <label className="form-label" for="textAreaExample">Copy and paste your data</label>
           </div>
           <div className="col-lg-6 mx-auto text-center mt-2 mb-4">
             <button type="submit" className="btn btn-primary mb-3" onClick={() => this.handleSubmitCopyText()}>Submit text</button>
