@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dnd-stats-react-app/static/css/main.5740cf87.css",
-    "main.js": "/dnd-stats-react-app/static/js/main.6164f0e3.js",
+    "main.js": "/dnd-stats-react-app/static/js/main.46cbec73.js",
     "static/js/787.e1bad108.chunk.js": "/dnd-stats-react-app/static/js/787.e1bad108.chunk.js",
     "index.html": "/dnd-stats-react-app/index.html",
     "main.5740cf87.css.map": "/dnd-stats-react-app/static/css/main.5740cf87.css.map",
-    "main.6164f0e3.js.map": "/dnd-stats-react-app/static/js/main.6164f0e3.js.map",
+    "main.46cbec73.js.map": "/dnd-stats-react-app/static/js/main.46cbec73.js.map",
     "787.e1bad108.chunk.js.map": "/dnd-stats-react-app/static/js/787.e1bad108.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5740cf87.css",
-    "static/js/main.6164f0e3.js"
+    "static/js/main.46cbec73.js"
   ]
 }
