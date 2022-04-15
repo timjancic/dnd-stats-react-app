@@ -6,6 +6,10 @@ class ModalData extends Component {
     super(props);
 
     this.onFileChange = this.onFileChange.bind(this);
+
+    this.state = {
+      textInput: "",
+    }
   }
 
   // On file select (from the pop up)
@@ -35,7 +39,7 @@ class ModalData extends Component {
       //This function waits for the reader to finish up to a maximum amount of time set by max
       return new Promise((resolve,reject) => {
         let i = 0;
-        let max = 10;
+        let max = 10; //this number is the amount of seconds it will wait
         console.log("loading file");
         setInterval(() => {
           if (reader.readyState == 2) {
@@ -52,6 +56,22 @@ class ModalData extends Component {
       });
     };
   };
+
+  handleSubmitCopyText = () => {
+    this.props.onClose();
+
+    let rawArray = this.state.textInput.split("\n");
+
+    let dataTable = new Array(rawArray.length);
+
+    //create a table of values from the info
+    for (let i = 0; i < rawArray.length; i++) {
+      dataTable[i] = JSON.parse(rawArray[i]);
+    }
+
+    this.props.onFileNameChange("copy and paste data");
+    this.props.onUpload(dataTable);
+  }
 
   render() {
     return (
@@ -90,8 +110,21 @@ class ModalData extends Component {
           <input type="file" onChange={this.onFileChange} />
           <p>-or-</p>
           <div className="form-outline">
-            <textarea className="form-control" id="textAreaExample" rows="4"></textarea>
-            <label className="form-label" for="textAreaExample">Copy and past not working yet</label>
+            <textarea
+              className="form-control"
+              id="textAreaExample"
+              rows="4"
+              onChange={(e) => {
+                this.setState({
+                  textInput: e.target.value
+                });
+              }
+            }>
+            </textarea>
+            <label className="form-label" for="textAreaExample">Copy and paste not working yet</label>
+          </div>
+          <div className="col-lg-6 mx-auto text-center mt-2 mb-4">
+            <button type="submit" className="btn btn-primary mb-3" onClick={() => this.handleSubmitCopyText()}>Submit text</button>
           </div>
         </div>
         <div className="modal-footer">

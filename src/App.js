@@ -80,7 +80,7 @@ class App extends Component {
   handleDataUpload = (data) => {
     this.setState({
       currentData: data
-    })
+    });
 
     this.handleSubmitNames();
   }
