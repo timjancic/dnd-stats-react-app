@@ -78,11 +78,10 @@ class App extends Component {
   }
 
   handleDataUpload = (data) => {
-    this.setState({
-      currentData: data
-    });
-
-    this.handleSubmitNames();
+    this.setState(
+      { currentData: data },
+      () => { this.handleSubmitNames() }
+    );
   }
 
   render() {
