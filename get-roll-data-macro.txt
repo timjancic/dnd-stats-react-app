@@ -12,7 +12,7 @@ for (let i = 0; i < game.data.messages.length; i++) {
     const flavor = messageData.flavor ? messageData.flavor : "";
     const advantageMode = rollData.options.advantageMode != undefined ? rollData.options.advantageMode : 0;
     const nDice = rollData.terms[0].number;
-    const faces = rollData.terms[0].faces;
+    const faces = rollData.terms[0].faces ? rollData.terms[0].faces : 0
 
     let results = [];
     //sometimes a message gets categorized as a roll but is just a number with no result, this if statement handles that case
